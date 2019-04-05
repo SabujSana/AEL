@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SecondarySplashScreenActivity" />
-        <activity android:name=".activities.SplashScreenActivity"></activity>
+        <activity android:name=".activities.SplashScreenActivity" />
+        <activity android:name=".activities.LoginActivity"></activity>
     </application>
 
 </manifest>
