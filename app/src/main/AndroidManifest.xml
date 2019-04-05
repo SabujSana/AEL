@@ -44,7 +44,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.SplashScreenActivity" />
         <activity android:name=".activities.LoginActivity"/>
     </application>

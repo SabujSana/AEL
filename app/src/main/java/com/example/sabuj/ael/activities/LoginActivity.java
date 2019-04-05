@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_LONG).show();
                 sharedPreferenceManager.setIsLoggedIn(true);
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 finish();
             }
 
@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
             handleSigninResult(task);
             Toast.makeText(getApplicationContext(), "Sign In Successfully", Toast.LENGTH_LONG).show();
             sharedPreferenceManager.setIsLoggedIn(true);
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
         }
     }

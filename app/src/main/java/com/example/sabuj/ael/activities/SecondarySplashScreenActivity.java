@@ -1,9 +1,7 @@
 package com.example.sabuj.ael.activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +9,6 @@ import android.widget.ImageView;
 
 import com.example.sabuj.ael.R;
 import com.example.sabuj.ael.utils.SharedPreferenceManager;
-import com.koushikdutta.ion.Ion;
 
 public class SecondarySplashScreenActivity extends AppCompatActivity {
     private SharedPreferenceManager preferenceManager;
@@ -47,7 +44,7 @@ public class SecondarySplashScreenActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     if (preferenceManager.getIsLoggedIn()) {
-                        startActivity(new Intent(SecondarySplashScreenActivity.this, MainActivity.class));
+                        startActivity(new Intent(SecondarySplashScreenActivity.this, HomeActivity.class));
                         finish();
                     } else {
                         startActivity(new Intent(SecondarySplashScreenActivity.this, LoginActivity.class));
