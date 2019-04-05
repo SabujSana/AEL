@@ -1,6 +1,10 @@
 package com.example.sabuj.ael.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +19,7 @@ public class SecondarySplashScreenActivity extends AppCompatActivity {
     private SharedPreferenceManager preferenceManager;
     private ImageView ivSplash;
     Handler handler;
+    private ConnectivityManager connectivityManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +33,15 @@ public class SecondarySplashScreenActivity extends AppCompatActivity {
         }
 
         ivSplash = findViewById(R.id.iv_splash_gif);
-        Ion.with(ivSplash).load("http://supdogs.com/wp-content/themes/resto/assets/images/load.gif");
+
+        connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            Ion.with(ivSplash).load("http://supdogs.com/wp-content/themes/resto/assets/images/load.gif");
+        } else {
+            ivSplash.setImageDrawable(getResources().getDrawable(R.drawable.splash_anim));
+        }
+
 
         if (!preferenceManager.isFirstTimeLaunch()) {
             handler = new Handler();
