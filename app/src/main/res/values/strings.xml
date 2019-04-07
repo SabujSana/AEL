@@ -13,6 +13,8 @@
     <array name="menuOptions">
         <item>Home</item>
         <item>About</item>
+        <item>Order</item>
+        <item>Payment</item>
         <item>Exit</item>
     </array>
     <array name="array_dot_active">
