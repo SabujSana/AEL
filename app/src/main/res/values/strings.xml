@@ -10,11 +10,12 @@
     <string name="text_splash_screen3">Now Developing android Mobile Apps</string>
     <string name="xyz">XYZ</string>
     <string name="animated_rainbow_span">Animated rainbow span</string>
+    <string name="google_maps_key">AIzaSyAJqF2iROs3YZ5VlIJPOBQqdRGiMcyRw38</string>
     <array name="menuOptions">
         <item>Home</item>
-        <item>About</item>
         <item>Order</item>
         <item>Payment</item>
+        <item>About</item>
         <item>Exit</item>
     </array>
     <array name="array_dot_active">
